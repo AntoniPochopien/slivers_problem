@@ -35,8 +35,19 @@ class _ScreenState extends State<Screen> {
                 expandedHeight: 200,
                 collapsedHeight: kToolbarHeight,
                 flexibleSpace: FlexibleSpaceBar(
+                  titlePadding: EdgeInsets.zero,
                   //Add some content
-                  title: Center(child: Text('Felxible space')),
+                  title: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text('Felxible space'),
+                      Container(
+                        height: 1,
+                        width: double.infinity,
+                        color: Colors.black,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
